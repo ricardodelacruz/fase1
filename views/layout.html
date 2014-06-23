@@ -101,64 +101,188 @@
           </div>
         </nav>
         <!-- Navbar =============Vertical============================= -->
+                
         <div class="row">
-          <div class="col-sm-3">
-            <div class="sidebar-nav">
-              <div class="navbar navbar-default" role="navigation">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-                    <span class="sr-only">Empresa</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <span class="visible-xs navbar-brand">Menú</span>
+            <div class="col-sm-3">
+                <div class="panel panel-group" id="main">
+                    <div class="panel-body">
+                        <div class="panel-heading">  
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#main" href="#accordion"><span class="glyphicon glyphicon-list-alt"></span>Menú</a>
+                            </h4>  
+                        </div>
+                        <div class="panel-collapse collapse panel-scroll" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close"></span> Asientos</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><span class="glyphicon glyphicon-eye-open text-primary"></span> Ver</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><span class="glyphicon glyphicon-flash text-success"></span> Recientes</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><span class="glyphicon glyphicon-file text-info"></span> Ayuda</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><span class="glyphicon glyphicon-comment text-success"></span> Mensajes</a> <span class="badge">4</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                        <span class="glyphicon glyphicon-file"></span> Reportes</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><span class="glyphicon glyphicon-usd"></span> Balance general</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><span class="glyphicon glyphicon-tasks"></span> Balanza</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-cog"></span> Configurar</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse ">
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Usuarios</a> <span class="label label-success">$ 42</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Grupos</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Permisos</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Empresa</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-list-alt"></span> Catálogos</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFive" class="panel-collapse collapse ">
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Empleados</a> <span class="label label-success">42</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Proveedores</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Cuentas</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Empresa</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-user"></span> Perfil</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse ">
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Preferencias</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">Notificaciones</a> <span class="label label-info">9</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#" class="text-danger"><span class="glyphicon glyphicon-trash text-danger"></span> Delete Account</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="navbar-collapse collapse sidebar-navbar-collapse">
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Asientos</a></li>
-                    <li><a href="#">Libro diario</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Balance general</a></li>
-                        <li><a href="#">Balanza</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Otros reportes</li>
-                        <li><a href="#">Reporte diario</a></li>
-                        <li><a href="#">Otro menu</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Configurar <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li class="dropdown-header">Sistema</li>
-                        <li><a href="#">Usuarios</a></li>
-                        <li><a href="#">Grupos</a></li>
-                        <li><a href="#">Permisos</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Empleados</a></li>
-                        <li><a href="#">Proveedores</a></li>
-                        <li><a href="#">Cuentas</a></li>
-                      </ul>
-                    </li>                
-                    <li><a href="#">Mensajes <span class="badge">1</span></a></li>
-                  </ul>
-                </div><!--/.nav-collapse -->
-              </div>
-            </div>
             </div>
             <div class="col-sm-9">
-            <ol class="breadcrumb">
-                <li><a href="#">Peril</a></li>
-                <li><a href="#">Preferencias</a></li>
-                <li class="active">Colores</li>
-            </ol>
                 {{include}}
             </div>
-        </div
+        </div>
         <!-- ====== ================================================== -->
-    </div>
+    
     <!-- The javascript =============================================
        (Placed at the end of the document so the pages load faster) -->
        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
