@@ -1,0 +1,159 @@
+timestamp: 2014-06-23T11:43:28.887372
+CREATE TABLE pais(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(128)
+);
+success!
+timestamp: 2014-06-23T11:43:28.909308
+CREATE TABLE estado(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    clave_interna CHAR(2),
+    nombre CHAR(128),
+    pais_id INTEGER REFERENCES pais (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-06-23T11:43:28.923489
+CREATE TABLE municipio(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    clave_interna CHAR(3),
+    nombre CHAR(128),
+    estado_id INTEGER REFERENCES estado (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-06-23T11:43:28.944049
+CREATE TABLE localidad(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    clave_interna CHAR(4),
+    nombre CHAR(128),
+    lat_grad CHAR(512),
+    lon_grad CHAR(512),
+    lat_dec CHAR(512),
+    lon_dec CHAR(512),
+    municipio_id INTEGER REFERENCES municipio (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-06-23T11:43:28.953246
+CREATE TABLE banco(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(128)
+);
+success!
+timestamp: 2014-06-23T11:43:28.975372
+CREATE TABLE persona(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    registro_fiscal CHAR(15),
+    dir_calle CHAR(128),
+    dir_num_ext CHAR(40),
+    dir_num_int CHAR(40),
+    dir_colonia CHAR(128),
+    dir_cp CHAR(10),
+    dir_telefono CHAR(10),
+    dir_movil CHAR(10),
+    dir_email CHAR(128),
+    localidad_id INTEGER REFERENCES localidad (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-06-23T11:43:29.008424
+CREATE TABLE empleado(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(512),
+    ap_paterno CHAR(512),
+    ap_materno CHAR(512),
+    registro_fiscal CHAR(15),
+    dir_calle CHAR(128),
+    dir_num_ext CHAR(40),
+    dir_num_int CHAR(40),
+    dir_colonia CHAR(128),
+    dir_cp CHAR(10),
+    dir_telefono CHAR(10),
+    dir_movil CHAR(10),
+    dir_email CHAR(128),
+    localidad_id INTEGER REFERENCES localidad (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-06-23T11:43:29.033997
+CREATE TABLE proveedor(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    razon_social CHAR(512),
+    nombre_comercial CHAR(512),
+    registro_fiscal CHAR(15),
+    dir_calle CHAR(128),
+    dir_num_ext CHAR(40),
+    dir_num_int CHAR(40),
+    dir_colonia CHAR(128),
+    dir_cp CHAR(10),
+    dir_telefono CHAR(10),
+    dir_movil CHAR(10),
+    dir_email CHAR(128),
+    localidad_id INTEGER REFERENCES localidad (id) ON DELETE CASCADE,
+    producto_comercial CHAR(128)
+);
+success!
+timestamp: 2014-06-23T11:43:29.050987
+CREATE TABLE proveedor_banco(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    proveedor_id INTEGER REFERENCES proveedor (id) ON DELETE CASCADE,
+    banco_id INTEGER REFERENCES banco (id) ON DELETE CASCADE,
+    clabe CHAR(512),
+    cuenta CHAR(512)
+);
+success!
+timestamp: 2014-06-23T11:43:29.076886
+CREATE TABLE empresa(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    registro_fiscal CHAR(15),
+    dir_calle CHAR(128),
+    dir_num_ext CHAR(40),
+    dir_num_int CHAR(40),
+    dir_colonia CHAR(128),
+    dir_cp CHAR(10),
+    dir_telefono CHAR(10),
+    dir_movil CHAR(10),
+    dir_email CHAR(128),
+    localidad_id INTEGER REFERENCES localidad (id) ON DELETE CASCADE,
+    razon_social CHAR(512)
+);
+success!
+timestamp: 2014-06-23T11:43:29.093995
+CREATE TABLE empresa_banco(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    empresa_id INTEGER REFERENCES empresa (id) ON DELETE CASCADE,
+    banco_id INTEGER REFERENCES banco (id) ON DELETE CASCADE,
+    clabe CHAR(512),
+    cuenta CHAR(512)
+);
+success!
+timestamp: 2014-06-23T11:43:29.129226
+CREATE TABLE sucursal(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    empresa_id INTEGER REFERENCES empresa (id) ON DELETE CASCADE,
+    nombre CHAR(128),
+    registro_fiscal CHAR(15),
+    dir_calle CHAR(128),
+    dir_num_ext CHAR(40),
+    dir_num_int CHAR(40),
+    dir_colonia CHAR(128),
+    dir_cp CHAR(10),
+    dir_telefono CHAR(10),
+    dir_movil CHAR(10),
+    dir_email CHAR(128),
+    localidad_id INTEGER REFERENCES localidad (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-06-23T11:43:29.145023
+CREATE TABLE departamento(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    sucursal_id INTEGER REFERENCES sucursal (id) ON DELETE CASCADE,
+    nombre CHAR(128)
+);
+success!
+timestamp: 2014-06-23T11:43:29.259226
+CREATE TABLE cc_empresa(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    empresa_id INTEGER REFERENCES empresa (id) ON DELETE CASCADE,
+    num_cc CHAR(128),
+    descripcion CHAR(128),
+    nivel INTEGER,
+    naturaleza CHAR(40)
+);
+success!
