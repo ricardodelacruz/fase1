@@ -9,6 +9,22 @@
 ## - call exposes all registered services (none by default)
 #########################################################################
 
+def index2():
+    """
+    Útil para introducir los datos iniciales de una empresa
+    """
+
+    form = SQLFORM.factory(db.pais, db.estado, db.municipio,  db.localidad,\
+            db.empresa)
+
+    if form.process().accepted:
+        response.flash = 'OK'
+    elif form.errors:
+        response.flash = 'Errores en el formulario'
+    else:
+        response.flash = 'Formulario incompleto'
+
+    return dict(form=form)
 
 def index():
     """

@@ -1,0 +1,183 @@
+{{left_sidebar_enabled,right_sidebar_enabled=False,('message' in globals())}}
+{{extend 'layout.html'}}
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<style>
+
+/* útil para evitar la barrita  de navegación */
+div.tab-content { overflow: visible; }
+
+</style>
+
+{{if 'message' in globals():}}
+<h3>{{=message}}</h3>
+{{pass}}
+
+<!-- aquí debe ir una migaja de pan -->
+
+<h1>Configuración de empresa</h1>
+
+{{#=form}}
+
+<ul class='nav nav-tabs'>
+    <!--li class="active"><a href="#usuario">Usuario</a></li-->
+    <li class='active'><a href='#empresa' data-toggle='tab'>Empresa</a></li>
+    <li><a href='#localizacion' data-toggle='tab'>Localización</a></li>
+    <li><a href='#coordenadas' data-toggle='tab'>Coordenadas</a></li>
+    <!--li><a href="#catalogo">Catálogo</a></li-->
+</ul>
+
+<div class='tab-content'>
+
+    {{#=form.custom.begin}}
+
+    <div class='tab-pane fade in active' id='empresa'>
+    <div class='row-fluid'>
+    {{=form.custom.begin}}
+    <fieldset>
+
+    <legend>Datos de la empresa</legend>
+    <!--span class="glyphicon glyphicon-search"></span-->
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.pais_id}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.pais_id}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.estado_id}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.estado_id}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.municipio_id}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.municipio_id}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.nombre}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.nombre}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.registro_fiscal}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.registro_fiscal}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.dir_calle}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.dir_calle}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.dir_num_ext}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.dir_num_ext}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.dir_num_int}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.dir_num_int}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.dir_colonia}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.dir_colonia}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.dir_cp}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.dir_cp}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.dir_telefono}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.dir_telefono}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.dir_movil}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.dir_movil}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.dir_email}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.dir_email}} </div>
+    </div>
+
+    </fieldset>
+    {{#=form.custom.end}}
+    </div>
+    </div> <!-- end tab-pane id empresa-->
+
+    <div class='tab-pane fade' id='localizacion'>
+    <div class='row-fluid'>
+    {{#=form.custom.begin}}
+    <fieldset>
+
+    <legend>Localización</legend>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.clave_interna}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.clave_interna}} </div>
+    </div>
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.nombre}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.nombre}} </div>
+    </div>
+
+    </fieldset>
+    {{#=form.custom.end}}
+    </div>
+    </div> <!-- end tab-pane id localizacion-->
+
+    <div class='tab-pane fade' id='coordenadas'>
+    <div class='row-fluid'>
+    <fieldset>
+
+    {{#=form.custom.begin}}
+
+    <legend>Coordenadas</legend>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.lat_grad}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.lat_grad}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.lon_grad}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.lon_grad}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.lat_dec}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.lat_dec}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-2'> {{=form.custom.label.lon_dec}} </div>
+        <div class='col-md-5'> {{=form.custom.widget.lon_dec}} </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-6'></div>
+        <div class='col-md-1'> {{=form.custom.submit}} </div>
+    </div>
+
+    </fieldset>
+    {{=form.custom.end}}
+    </div>
+    </div> <!-- end tab-pane id coordenadas-->
+
+    {{#=form.custom.end}}
+
+</div>
+
+{{block right_sidebar}}
+<h3> Right side bar </h3>
+{{end}}
