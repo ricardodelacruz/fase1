@@ -5,7 +5,7 @@
 <!--[if IE 7]><html class="ie ie7 ie-lte9 ie-lte8 ie-lte7 no-js" lang="{{=T.accepted_language or 'en'}}"> <![endif]-->
 <!--[if IE 8]><html class="ie ie8 ie-lte9 ie-lte8 no-js" lang="{{=T.accepted_language or 'en'}}"> <![endif]-->
 <!--[if IE 9]><html class="ie9 ie-lte9 no-js" lang="{{=T.accepted_language or 'en'}}"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{=T.accepted_language or 'en'}}"> <!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{=T.accepted_language or 'es'}}"> <!--<![endif]-->
 <head>
     <title>{{=response.title or request.application}}</title>
     <!--[if !HTML5]>
@@ -108,14 +108,14 @@
                     <div class="panel-body">
                         <div class="panel-heading">  
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#main" href="#accordion"><span class="glyphicon glyphicon-list-alt"></span>Menú</a>
+                                <a data-toggle="collapse" data-parent="#main" href="#accordion"><span class="glyphicon glyphicon-list-alt"></span> Menú <b class="caret"></b></a>
                             </h4>  
                         </div>
                         <div class="panel-collapse collapse panel-scroll" id="accordion">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close"></span> Asientos</a>
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close"></span> Asientos <b class="caret"></b></a>
                                     </h4>
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse">
@@ -146,12 +146,20 @@
                                         </table>
                                     </div>
                                 </div>
-                            </div>                            
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="">
+                                        <span class="glyphicon glyphicon-file"></span> Libro diario</a>
+                                    </h4>
+                                </div>
+                            </div>                          
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-                                        <span class="glyphicon glyphicon-file"></span> Reportes</a>
+                                        <span class="glyphicon glyphicon-file"></span> Reportes <b class="caret"></b></a>
                                     </h4>
                                 </div>
                                 <div id="collapseFour" class="panel-collapse collapse">
@@ -176,7 +184,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-cog"></span> Configurar</a>
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-cog"></span> Configurar <b class="caret"></b></a>
                                     </h4>
                                 </div>
                                 <div id="collapseTwo" class="panel-collapse collapse ">
@@ -199,8 +207,12 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <a href="#">Empresa</a>
+                                                    <td>                                                        
+                                                        <a href="#SubMenu1" data-toggle="collapse" data-parent="#SubMenu1">Empresa <b class="caret"></b></a>
+                                                            <div class="collapse list-group-submenu" id="SubMenu1">
+                                                                <a href="#" class="list-group-item" data-parent="#SubMenu1">Sucursales</a>
+                                                                <a href="#" class="list-group-item" data-parent="#SubMenu1">Departamentos</a>
+                                                            </div>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -211,7 +223,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-list-alt"></span> Catálogos</a>
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-list-alt"></span> Catálogos <b class="caret"></b></a>
                                     </h4>
                                 </div>
                                 <div id="collapseFive" class="panel-collapse collapse ">
@@ -246,7 +258,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-user"></span> Perfil</a>
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-user"></span> Perfil <b class="caret"></b></a>
                                     </h4>
                                 </div>
                                 <div id="collapseThree" class="panel-collapse collapse ">
@@ -277,12 +289,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-9">
-            <ol class="breadcrumb">
-                <li><a href="#">Peril</a></li>
-                <li><a href="#">Preferencias</a></li>
-                <li class="active">Colores</li>
-            </ol>
+            <div class="col-sm-9">            
                 {{include}}
             </div>
         </div>
