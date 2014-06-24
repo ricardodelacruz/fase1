@@ -8,28 +8,10 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-<script>
-
-    /*
-    $('#myTab li a').click(function(e) {
-        console('warning');
-        $(this).tab('show');
-    });
-    */
-
-    /*
-    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-          e.target;
-          e.relatedTarget;
-    });
-    */
-
-</script>
-
 <style>
 
-div.tab-content { overflow:visible; }
-.limpia { clear:both; }
+/* útil para evitar la barrita  de navegación */
+div.tab-content { overflow: visible; }
 
 </style>
 
@@ -44,7 +26,6 @@ div.tab-content { overflow:visible; }
 {{#=form}}
 
 <ul class='nav nav-tabs'>
-<!--ul class='nav nav-pills'-->
     <!--li class="active"><a href="#usuario">Usuario</a></li-->
     <li class='active'><a href='#empresa' data-toggle='tab'>Empresa</a></li>
     <li><a href='#localizacion' data-toggle='tab'>Localización</a></li>
@@ -53,11 +34,8 @@ div.tab-content { overflow:visible; }
 </ul>
 
 <div class='tab-content'>
-<!--div class='tabbable tabs-left'-->
 
     {{#=form.custom.begin}}
-
-    <div class='limpia'></div>
 
     <div class='tab-pane fade in active' id='empresa'>
     <div class='row-fluid'>
@@ -194,7 +172,7 @@ div.tab-content { overflow:visible; }
     </fieldset>
     {{=form.custom.end}}
     </div>
-    </div> <!-- end coordenadas-->
+    </div> <!-- end tab-pane id coordenadas-->
 
     {{#=form.custom.end}}
 
