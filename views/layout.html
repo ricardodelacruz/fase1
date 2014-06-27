@@ -44,6 +44,18 @@
        HTML5 elements & feature detects -->
   <script src="{{=URL('static','js/modernizr.custom.js')}}"></script>
 
+    <!-- DataTables CSS -->
+    <link href="{{=URL('static','css/datatables/jquery.dataTables.css')}}" rel="stylesheet">
+    <link href="{{=URL('static','css/datatables/dataTables.bootstrap.css')}}" rel="stylesheet">
+    <link href="{{=URL('static','css/datatables/jquery.dataTables_themeroller.css')}}" rel="stylesheet">
+    <link href="{{=URL('static','css/datatables/jquery.dataTables_themeroller.min.css')}}" rel="stylesheet">
+
+    <!-- jQuery -->    
+    <script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    
+    <!-- DataTables -->
+    <script src="{{=URL('static','js/datatables/jquery.dataTables.js')}}"></script>
+    <script src="{{=URL('static','js/datatables/dataTables.bootstrap.js')}}"></script>
   <!-- include stylesheets -->
     {{
         response.files.insert(0,URL('static','css/bootstrap.min.css'))
@@ -307,11 +319,6 @@
 
     <script src="{{=URL('static','js/nav.js')}}"></script>
     <script src="{{=URL('static','js/classie.js')}}"></script>
-
-       <!--(Placed at the end of the document so the pages load faster) -->
-       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
 
     <script src="{{=URL('static','js/bootstrap.min.js')}}"></script>
     <!--[if lt IE 7 ]>
