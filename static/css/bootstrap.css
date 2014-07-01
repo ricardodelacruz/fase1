@@ -2379,6 +2379,7 @@ input[type="button"].btn-block {
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
 .glyphicon {
   position: relative;
   top: 1px;
@@ -3008,7 +3009,7 @@ input[type="button"].btn-block {
   outline: 0;
 }
 .dropdown-menu {
-  position: absolute;
+  /*position: absolute;*/
   top: 100%;
   left: 0;
   z-index: 1000;
@@ -3093,14 +3094,6 @@ input[type="button"].btn-block {
   font-size: 12px;
   line-height: 1.42857143;
   color: #999;
-}
-.dropdown-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 990;
 }
 .pull-right > .dropdown-menu {
   right: 0;
@@ -4122,7 +4115,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .breadcrumb > li + li:before {
   padding: 0 5px;
   color: #ccc;
-  content: "/\25b6";
+  content: "/\00a0";
 }
 .breadcrumb > .active {
   color: #999;
