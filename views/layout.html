@@ -215,7 +215,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="#">Cuentas</a>
+                                            <a href="{{=URL('cc_empresa','listar')}}">Cuentas</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -250,7 +250,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="#" class="text-danger"><span class="glyphicon glyphicon-trash text-danger"></span> Delete Account</a>
+                                            <a href="#" class="text-danger"><span class="glyphicon glyphicon-trash text-danger"></span> Eliminar cuenta</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -271,12 +271,15 @@
                 <div class="navbar-header">        
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                         <span class="sr-only">Desplegar navegación</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        <span class="b-icon-bar"></span>
+                        <span class="b-icon-bar"></span>
+                        <span class="b-icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Logotipo</a>
-                    <button class="nav-toggler toggle-push-left navbar-brand" >Menú</button>
+                    <button class="nav-toggler toggle-push-left navbar-brand" >
+                      <span class="glyphicon glyphicon-align-justify"></span>
+                    </button>                    
+                    <a class="navbar-brand" href="{{=URL('default','index')}}">Datawork.mx</a>
+                    
                 </div>     
                 <!-- Agrupar los enlaces de navegación, los formularios y cualquier
                    otro elemento que se pueda ocultar al minimizar la barra -->
@@ -289,6 +292,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Ver perfíl</a></li>
+                                <li><a href="{{=URL('default','user')}}">Iniciar sesión</a></li>
                                 <li class="divider"></li>
                                 <li><a href="#">Cerrar sesión</a></li>
                             </ul>
@@ -304,8 +308,17 @@
                     <!-- FIN-CONTENIDO================================================= -->
 
                     <!-- FOOTER======================================================== -->
-                    <footer class="modal-footer">Este es el footer</footer>
+                    <footer class="modal-footer">
+                        <div class="col-sm-6 text-left">
+                          {{=T('Copyright')}} &#169; {{=request.now.year}}
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            {{=T('Powered by')}}
+                          <a href="#">web2py</a>
+                        </div>
+                    </footer>
                     <!-- FIN-FOOTER==================================================== -->
+
                 </div>
             </div>
         </div>
