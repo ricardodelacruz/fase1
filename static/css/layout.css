@@ -48,6 +48,16 @@ section {
 |* ------------------------------------------------------------ *|
 \* ------------------------------------------------------------ */
 /* general style for all menus */
+.panel-body{
+    width: 270px;
+}
+#main {
+        position: absolute;
+        overflow-y: scroll;
+        overflow-x: scroll; 
+        width: 290px;
+        height: 100%;
+}
 nav.menu {
     position: fixed;
     z-index: 20;
@@ -66,22 +76,18 @@ nav.menu ul {
 nav.menu a {
     font-weight: 200;
 }
-button.close-menu {
+.close-menu {
+    cursor: pointer;
 }
 button.close-menu:focus {
     outline: none
 }
 /* slide menu left and right, push menu left and right */
-nav.slide-menu-left {
-    top: 0;
-    width: 300px;
-    height: 100%;
-    overflow: auto;
-}
+
 nav.push-menu-left {
-    width: 290px;
+    width: 270px;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
 }
 nav.slide-menu-left li {
     display: block;
@@ -99,27 +105,17 @@ nav.push-menu-left li:last-child,
 nav.push-menu-right li:last-child {
     border-bottom: none
 }
-nav.slide-menu-left a,
-nav.slide-menu-right a,
-nav.push-menu-left a,
-nav.push-menu-right a {
+
+nav.push-menu-left a {
     display: block;
     padding: 10px;
-    font-size: 18px;
+    font-size: 14px;
 }
-nav.slide-menu-left button.close-menu,
-nav.slide-menu-right button.close-menu,
-nav.push-menu-left button.close-menu,
-nav.push-menu-right button.close-menu {
+nav.push-menu-left button.close-menu{
     padding: 10px 30px;
 }
-nav.slide-menu-left,
 nav.push-menu-left {
     left: -300px
-}
-nav.slide-menu-right,
-nav.push-menu-right {
-    right: -300px
 }
 body.sml-open nav.slide-menu-left,
 body.pml-open nav.push-menu-left {
@@ -237,6 +233,7 @@ body.pmb-open #wrapper {
 	}
 }
 @media all and (max-width: 330px) { 
+
 	nav.slide-menu-left,
 	nav.slide-menu-right,
 	nav.push-menu-left,
@@ -266,4 +263,5 @@ body.pmb-open #wrapper {
 	body.pmr-open #wrapper {
 	  	left: -100%
 	}
+
 }
